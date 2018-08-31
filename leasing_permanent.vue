@@ -119,7 +119,9 @@
                         }
                     }
 
-                    this.permLeasing = response[0].data;
+                    if(response && response[0]) {
+                        this.permLeasing = response[0].data;
+                    }
 
                     this.dataLoaded = true;
                 });
