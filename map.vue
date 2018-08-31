@@ -92,21 +92,23 @@
                     return all_stores
                 },
                 getSVGMap() {
-                    var svg_maps = this.findRepoByName("SVG Maps") 
-                    var floor_one = "";
-                    var floor_two = "";
-                    _.forEach(svg_maps, function(value, key) {
-                        if(value.id == 41084) {
-                            floor_one = _.split(value.image_url, '?');
-                            floor_one = floor_one[0];
-                        }
-                        if (value.id == 41085) {
-                            floor_two = _.split(value.image_url, '?');
-                            floor_two = floor_two[0];
-                        }
-                    });
-                    this.floorOne = floor_one;
-                    this.floorTwo = floor_two;
+                    var svg_maps = this.findRepoByName("SVG Maps")
+                    if(svg_maps != null && svg_maps !== undefined){
+                        var floor_one = "";
+                        var floor_two = "";
+                        _.forEach(svg_maps, function(value, key) {
+                            if(value.id == 41084) {
+                                floor_one = _.split(value.image_url, '?');
+                                floor_one = floor_one[0];
+                            }
+                            if (value.id == 41085) {
+                                floor_two = _.split(value.image_url, '?');
+                                floor_two = floor_two[0];
+                            }
+                        });
+                        this.floorOne = floor_one;
+                        this.floorTwo = floor_two;
+                    }
                 },
                 // getMiniMap () {
                 //     var svg_maps = this.findRepoByName("PNG Mini Map").images 
