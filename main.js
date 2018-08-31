@@ -79,17 +79,17 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'vuex-router-syn
             return {
                 menu_items: MenuItems,
                 social_media: [
-                    {
-                        name: "Facebook",
-                        url: "https://www.facebook.com/GerrardSquare",
-                        iconClass: "fab fa-facebook-f"
-                    },
-                    {
-                        name: "Twitter",
-                        url: "https://twitter.com/GerrardSquare",
-                        iconClass: "fab fa-twitter"
-                    }
-                ],
+                //     {
+                //         name: "Facebook",
+                //         url: "https://www.facebook.com/GerrardSquare",
+                //         iconClass: "fab fa-facebook-f"
+                //     },
+                //     {
+                //         name: "Twitter",
+                //         url: "https://twitter.com/GerrardSquare",
+                //         iconClass: "fab fa-twitter"
+                //     }
+                // ],
                 inside_banner : null
             }
         },
