@@ -93,9 +93,9 @@
                         }
                     }
                     
-                    var leasing_docs = this.findRepoByName('Leasing Documents').images;
+                    var leasing_docs = this.findRepoByName('Leasing Documents');
                     var _this = this;
-                    if (leasing_docs != null) {
+                    if (leasing_docs != null && leasing_doc != undefined) {
                         _.forEach(leasing_docs, function(value, key) {
                             if (value.id == 41067) {
                                 _this.leasingPlans = value.image_url;
