@@ -128,7 +128,9 @@
                         }
                     }
                     
-                    this.tempLeasing = response[0].data;
+                    if(response && response[0]) {
+                        this.tempLeasing = response[0].data;
+                    }
                     this.dataLoaded = true;
                 });
             },
