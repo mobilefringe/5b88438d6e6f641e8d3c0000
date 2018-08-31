@@ -66,14 +66,14 @@
 			created() {
 			    var temp_repo = this.findRepoByName('Events Banner');
                 if(temp_repo !== null && temp_repo !== undefined) {
-                       temp_repo = temp_repo.images;
-                       this.pageBanner = temp_repo[0];
+                   temp_repo = temp_repo.images;
+                   this.pageBanner = temp_repo[0];
+                }
+                else {
+                    this.pageBanner = {
+                        "image_url": "//codecloud.cdn.speedyrails.net/sites/5b88438d6e6f641e8d3c0000/image/png/1531495616000/inside_banner.png"
                     }
-                    else {
-                        this.pageBanner = {
-                            "image_url": "//codecloud.cdn.speedyrails.net/sites/5b88438d6e6f641e8d3c0000/image/png/1531495616000/inside_banner.png"
-                        }
-                    }
+                }
                     
 				this.$store.dispatch("getData", "events").then(response => {
 					this.currentEvent = this.findEventBySlug(this.id);
