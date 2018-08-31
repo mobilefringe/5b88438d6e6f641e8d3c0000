@@ -117,7 +117,7 @@
             },
             created() {
                 this.loadData().then(response => {
-                    var temp_repo = this.findRepoByName('Leasing Banner').images;
+                    var temp_repo = this.findRepoByName('Leasing Banner');
                     if(temp_repo !== null && temp_repo !== undefined) {
                        temp_repo = temp_repo.images;
                        this.pageBanner = temp_repo[0];
@@ -143,7 +143,7 @@
                 loadData: async function () {
                     this.property.mm_host = this.property.mm_host.replace("http:", "");
                     try {
-                        let results = await Promise.all([this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/gerrardsquare-temporary-leasing.json"})]);
+                        let results = await Promise.all([this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/lindsaysquare-temporary-leasing.json"})]);
                         return results;
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
