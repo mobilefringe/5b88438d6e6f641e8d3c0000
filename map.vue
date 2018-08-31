@@ -92,7 +92,7 @@
                     return all_stores
                 },
                 getSVGMap() {
-                    var svg_maps = this.findRepoByName("SVG Maps").images 
+                    var svg_maps = this.findRepoByName("SVG Maps") 
                     var floor_one = "";
                     var floor_two = "";
                     _.forEach(svg_maps, function(value, key) {
