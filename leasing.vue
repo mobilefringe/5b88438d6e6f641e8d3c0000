@@ -112,7 +112,9 @@
                         this.leasingImages = repo_data.images;
                     }
                                 
-                    this.currentPage = response[0].data;
+                    if(response && response[0]) {
+                        this.currentPage = .data;
+                    }
 
                     this.dataLoaded = true;
                 });
