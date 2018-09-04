@@ -91,6 +91,9 @@
                     all_stores.push(initZoom)
                     return all_stores
                 },
+                getSVGMap(){
+                  return this.property.svgmap_url;  
+                },
                 // getSVGMap() {
                 //     var svg_maps = this.findRepoByName("SVG Maps")
                 //     if(svg_maps != null && svg_maps !== undefined){
