@@ -11,7 +11,7 @@
                 <div class="main_container mobile_padding margin_30">
                     <div class="details_row">
                         <div class="details_col_3 hidden_phone">
-                            <img class="img_max" src="//codecloud.cdn.speedyrails.net/sites/5b88438d6e6f641e8d3c0000/image/jpeg/1531500156000/sidebanner4.jpg" alt="" />    
+                            <img class="img_max" src="http://via.placeholder.com/220x600" alt="" />    
                         </div>
                         <div class="details_col_9">
                             <div class="page_body" v-html="currentPage.body"></div>
