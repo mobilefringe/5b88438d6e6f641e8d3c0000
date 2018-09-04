@@ -48,8 +48,6 @@
                 return {
                     dataLoaded: false,
                     pageBanner: null,
-                    floorOne: null,
-                    floorTwo: null,
                     miniOne: null,
                     miniTwo: null
                 }
