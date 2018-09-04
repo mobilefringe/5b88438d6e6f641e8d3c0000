@@ -11,7 +11,7 @@
                 <div class="main_container margin_30">
                     <div class="details_row">
                         <div class="details_col_3 hidden_phone">
-                            <img class="img_max" src="//codecloud.cdn.speedyrails.net/sites/5b88438d6e6f641e8d3c0000/image/jpeg/1531500101000/sidebanner5.jpg" alt="" />    
+                            <img class="img_max" src="http://via.placeholder.com/220x600" alt="" />    
                         </div>
                         <div class="details_col_9" v-if="currentPromo">
                             <router-link to="/promotions">
@@ -62,7 +62,7 @@
                 }
             },
             created() {
-				var temp_repo = this.findRepoByName('Promotions Banner').images;
+				var temp_repo = this.findRepoByName('Promotions Banner');
                 if(temp_repo !== null && temp_repo !== undefined) {
                        temp_repo = temp_repo.images;
                        this.pageBanner = temp_repo[0];
