@@ -88,7 +88,7 @@
                     return all_stores
                 },
                 getSVGMap(){
-                  return this.property.svgmap_url;  
+                  return "//mallmaverick.com"+this.property.svgmap_url;  
                 },
                 // getSVGMap() {
                 //     var svg_maps = this.findRepoByName("SVG Maps")
