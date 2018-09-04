@@ -151,13 +151,15 @@
                     var listOne = [];
                     var listTwo = [];
                     _.forEach( this.processedStores , function( value, key ) {
-                        var starter = "A";
+                        if(value) {
+                            var starter = "A";
                         var breaker = "K";
                         var store_initial = _.toUpper(value.name[0]);
                         if (store_initial.charCodeAt(0) <= breaker.charCodeAt(0) && store_initial.charCodeAt(0) >= starter.charCodeAt(0)){
                             listOne.push(value);
                         } else {
                             listTwo.push(value);    
+                        }
                         }
                     });
                     this.listOne = _.groupBy(listOne, store => (isNaN(_.upperCase(store.name.charAt(0))) ? _.upperCase(store.name.charAt(0)) : "#"));
