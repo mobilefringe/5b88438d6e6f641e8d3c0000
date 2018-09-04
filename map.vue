@@ -47,9 +47,7 @@
             data: function() {
                 return {
                     dataLoaded: false,
-                    pageBanner: null,
-                    miniOne: null,
-                    miniTwo: null
+                    pageBanner: null
                 }
             },
             created (){
