@@ -217,7 +217,6 @@
                 },
                 floorList () {
                     var floor_list = [];
-                    console.log("this.getSVGurl",this.getSVGurl);
                     var floor_1 = {};
                     floor_1.id = "first-floor";
                     floor_1.title = "Level 1";
