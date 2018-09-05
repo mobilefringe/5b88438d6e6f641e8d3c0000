@@ -104,11 +104,6 @@
     </div>
 </template>
 
-<style>
-    #store_details_container .mapplic-popup-link {
-        display: none!important;
-    }
-</style>
 
 <script>
     define(['Vue', 'vuex', 'moment', "vue!mapplic-map"], function(Vue, Vuex, moment, MapplicComponent) {
