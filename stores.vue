@@ -154,7 +154,7 @@
                         if(value) {
                             var starter = "A";
                             var breaker = "K";
-                            console.log("processedStores", value)
+                            console.log("value", value)
                             var store_initial = _.toUpper(value.name[0]);
                             if (store_initial.charCodeAt(0) <= breaker.charCodeAt(0) && store_initial.charCodeAt(0) >= starter.charCodeAt(0)){
                                 listOne.push(value);
