@@ -10,7 +10,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="main_container margin_30">
+                <div class="main_container margin_30" id="store_details_container">
                     <div class="details_row">
                         <div class="details_col_3">
                             <img class="store_details_image center-block" :src="currentStore.store_front_url_abs" :alt="currentStore.name + ' Logo'" />
