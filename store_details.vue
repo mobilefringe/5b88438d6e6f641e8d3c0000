@@ -105,7 +105,7 @@
 </template>
 
 <style>
-    .mapplic-popup-link {
+    #store_details_container .mapplic-popup-link {
         display: none;
     }
 </style>
