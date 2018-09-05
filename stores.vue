@@ -154,7 +154,6 @@
                         if(value) {
                             var starter = "A";
                             var breaker = "K";
-                            // console.log("value", value)
                             if(value && value.name){
                             var store_initial = _.toUpper(value.name[0]);
                                 if (store_initial.charCodeAt(0) <= breaker.charCodeAt(0) && store_initial.charCodeAt(0) >= starter.charCodeAt(0)){
