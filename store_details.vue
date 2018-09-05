@@ -222,25 +222,14 @@
                     
                     if(floor_maps_repo !== null && floor_maps_repo !== undefined && floor_maps_repo.images.length > 0){
                         floor_maps = floor_maps_repo.images;
-                        if (this.currentStore.z_coordinate == 1) {
-                            var floor_1 = {};
-                            floor_1.id = "first-floor";
-                            floor_1.title = "Level 1";
-                            floor_1.map = this.getSVGurl;
-                            floor_1.z_index = 1;
-                            floor_1.show = true;
-                            
-                            floor_list.push(floor_1);
-                        } else if (this.currentStore.z_coordinate == 2) {
-                            var floor_2 = {};
-                            floor_2.id = "second-floor";
-                            floor_2.title = "Level 2";
-                            floor_2.map = _.find(floor_maps, function(o){ return _.toNumber(o.id) == _.toNumber(41085);}).image_url;
-                            floor_2.z_index = 2;
-                            floor_2.show = true;
-                            
-                            floor_list.push(floor_2);
-                        }
+                        var floor_1 = {};
+                        floor_1.id = "first-floor";
+                        floor_1.title = "Level 1";
+                        floor_1.map = this.getSVGurl;
+                        floor_1.z_index = 1;
+                        floor_1.show = true;
+                        
+                        floor_list.push(floor_1);
                     }
                     
                     return floor_list;
