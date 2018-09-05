@@ -217,18 +217,16 @@
                 },
                 floorList () {
                     var floor_list = [];
+                    floor_maps = floor_maps_repo.images;
+                    var floor_1 = {};
+                    floor_1.id = "first-floor";
+                    floor_1.title = "Level 1";
+                    floor_1.map = this.getSVGurl;
+                    floor_1.z_index = 1;
+                    floor_1.show = true;
                     
-                    if(floor_maps_repo !== null && floor_maps_repo !== undefined && floor_maps_repo.images.length > 0){
-                        floor_maps = floor_maps_repo.images;
-                        var floor_1 = {};
-                        floor_1.id = "first-floor";
-                        floor_1.title = "Level 1";
-                        floor_1.map = this.getSVGurl;
-                        floor_1.z_index = 1;
-                        floor_1.show = true;
-                        
-                        floor_list.push(floor_1);
-                    }
+                    floor_list.push(floor_1);
+                    
                     
                     return floor_list;
                 }
