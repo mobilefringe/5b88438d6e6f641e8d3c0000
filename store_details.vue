@@ -217,7 +217,6 @@
                 },
                 floorList () {
                     var floor_list = [];
-                    floor_maps = floor_maps_repo.images;
                     var floor_1 = {};
                     floor_1.id = "first-floor";
                     floor_1.title = "Level 1";
