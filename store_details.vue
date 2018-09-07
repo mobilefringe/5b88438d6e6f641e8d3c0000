@@ -150,7 +150,7 @@
                     this.currentStore.zoom = 2;
                     if ( _.includes(this.currentStore.store_front_url_abs, 'missing')) {
                         this.currentStore.store_front_url_abs = this.property.default_logo_url;
-                        console.log("this.currentStore.store_front_url_abs", this.currentStore.store_front_url_abs)
+                        console.log("this.currentStore.store_front_url_abs", this.currentStore);
                     }
                     
                     var vm = this;
