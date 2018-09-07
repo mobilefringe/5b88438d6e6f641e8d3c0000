@@ -28,7 +28,7 @@
 <script>
     define(["Vue", "vuex", "lightbox"], function (Vue, Vuex, Lightbox) {
         Vue.use(Lightbox);
-        return Vue.component("page-details-component", {
+        return Vue.component("thank_you", {
             template: template, // the variable template will be injected,
             props: ['id'],
             data: function data() {
