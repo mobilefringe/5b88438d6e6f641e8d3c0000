@@ -219,7 +219,7 @@ define([], function () {
                     meta: {
                         pageName: 'Search Results',
                     },
-                    name: 'searchResutls'
+                    name: 'search-results'
                 }
             ]
         },
