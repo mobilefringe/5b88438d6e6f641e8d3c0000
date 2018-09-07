@@ -55,8 +55,6 @@
                 updateCurrentPage(id) {
                     this.$nextTick(function() {
                         var _this = this;
-                        this.property.mm_host = this.property.mm_host.replace("http:", "");
-                        
                         var temp_repo = _this.findRepoByName('Pages Banner');
                         if(temp_repo !== null && temp_repo !== undefined) {
                            temp_repo = temp_repo.images;
