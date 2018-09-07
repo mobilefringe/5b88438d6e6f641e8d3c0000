@@ -217,7 +217,7 @@ define([], function () {
                     path: '',
                     component: view('search_results'),
                     meta: {
-                        pageName: 'Thank You',
+                        pageName: 'Search Results',
                     },
                     name: 'thankyou'
                 }
