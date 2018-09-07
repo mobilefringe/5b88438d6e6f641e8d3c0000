@@ -12,6 +12,7 @@
                     <div class="details_row">
                         
                         <div class="col-sm-12">
+                            <h3>Thank You</h3>
                             <div class="page_body">
                                 Your subscription has been confirmed. You've been added to our list and will hear from us soon.
                             </div>
