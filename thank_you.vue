@@ -9,7 +9,7 @@
                     </div>
                 </div>
                 <div class="main_container mobile_padding margin_30">
-                    <div class="details_row">
+                    <div class="row">
                         
                         <div class="col-sm-12">
                             <div class="page_body">
