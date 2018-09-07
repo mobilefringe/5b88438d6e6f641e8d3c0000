@@ -14,7 +14,9 @@
                             <img class="img_max" src="http://via.placeholder.com/220x600" alt="" />    
                         </div>
                         <div class="details_col_9">
-                            <div class="page_body" v-html="currentPage.body"></div>
+                            <div class="page_body">
+                                Your subscription has been confirmed. You've been added to our list and will hear from us soon.
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -66,8 +68,6 @@
                                     "image_url": "//codecloud.cdn.speedyrails.net/sites/5b88438d6e6f641e8d3c0000/image/png/1531495616000/inside_banner.png"
                                 }
                             }
-                            
-                            _this.currentPage = response.data;
                             _this.dataLoaded = true;
                         }, function (error) {
                             console.error( "Could not retrieve data from server. Please check internet connection and try again.");
