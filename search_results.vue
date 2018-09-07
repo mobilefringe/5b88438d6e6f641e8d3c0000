@@ -38,8 +38,8 @@
             props:['inside_banner'],
             data() {
                 return {
-                  searchResults: null,
-                  searchQuery: null
+                    searchResults: null,
+                    searchQuery: null
                 };
             },
             created() {
