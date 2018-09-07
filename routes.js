@@ -205,7 +205,7 @@ define([], function () {
                     meta: {
                         pageName: 'ThankYou',
                     },
-                    name: 'newsletter'
+                    name: 'thankyou'
                 }
             ]
         },
