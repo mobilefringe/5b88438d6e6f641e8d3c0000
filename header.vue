@@ -2,7 +2,7 @@
     <header>
         <section id="header" class="header main_container">
             <div class="row logo_container">
-                <div class="col-md-3">
+                <div class="col-sm-3">
                     <div class="site_logo">
                         <router-link to="/">
                             <img :alt="siteInfo.siteName" src="//codecloud.cdn.speedyrails.net/sites/5b88438d6e6f641e8d3c0000/image/jpeg/1536076279977/LSLogo.jpg">
@@ -15,7 +15,7 @@
                         <span></span>
                     </div>
                 </div>
-                <div class="col-md-9">
+                <div class="col-sm-9">
                     <div class="header_social_container hidden-sm hidden-xs">
                         <div class="header_social">
                             <span class="social_icon" v-for="item in social_media">
