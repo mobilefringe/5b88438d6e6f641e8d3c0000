@@ -17,6 +17,9 @@
                 </div>
                 <div class="col-sm-9">
                     <div class="header_social_container hidden-sm hidden-xs">
+                        <div>
+                            
+                        </div>
                         <div class="header_social">
                             <span class="social_icon" v-for="item in social_media">
                                 <a :href="item.url" target="_blank">
