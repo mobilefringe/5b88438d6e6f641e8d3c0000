@@ -196,6 +196,20 @@ define([], function () {
             ]
         },
         {
+            path: '/thank_you',
+            component: view('default'),
+            children: [
+                {
+                    path: '',
+                    component: view('newsletter'),
+                    meta: {
+                        pageName: 'Newsletter',
+                    },
+                    name: 'newsletter'
+                }
+            ]
+        },
+        {
             path: '*',
             redirect: '/'
         }
