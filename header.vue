@@ -185,24 +185,15 @@
                     this.windowWidth = window.innerWidth;
                 },
                 onOptionSelect(option) {
-      //   this.search_result = "";
-
-      //   if (option !== null && option !== undefined) {
-      //     if (option.store_front_url_abs) {
-      //       window.location = "/stores/" + option.slug;
-      //     } else {
-      //       this.$router.push("/events_and_promos/" + option.slug);
-      //     }
-      //   }:to="{name: 'stores-slug', params:{slug:store.slug, category: query}}"
-      this.$router.push({
-        name: "search-results",
-        query: { searchQuery: this.search_result },
-        params: { results: option }
-      });
-      this.$nextTick(function() {
-        this.search_result = "";
-      });
-    },
+                  this.$router.push({
+                    name: "search-results",
+                    query: { searchQuery: this.search_result },
+                    params: { results: option }
+                  });
+                  this.$nextTick(function() {
+                    this.search_result = "";
+                  });
+                },
             },
             beforeDestroy: function() {
                 window.removeEventListener('resize', this.getWindowWidth);
