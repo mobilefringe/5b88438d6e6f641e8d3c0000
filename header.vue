@@ -119,8 +119,8 @@
                     windowWidth: 0,
                     siteInfo: site,
                     search_result: null,
-      suggestionAttribute: "name",
-      keys: ["name", "description", "tags", "store.name"],
+                    suggestionAttribute: "name",
+                    keys: ["name", "description", "tags", "store.name"],
                 }
             },
             props:['menu_items', 'social_media'],
