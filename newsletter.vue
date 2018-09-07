@@ -39,7 +39,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <label for="cm-vuutyk-vuutyk">Email</label>
-                                        <input id="cm-vuutyk-vuutyk" required class="margin_20 form-control" name="cm-vuutyk-vuutyk" type="email" placeholder="Email">
+                                        <input id="cm-vuutyk-vuutyk" required class="margin_20 form-control" name="cm-edklkj-edklkj" type="email" placeholder="Email">
                                     </div>
                                     <div class="col-md-12">
                                         <div style="margin-left: 20px">
