@@ -26,7 +26,7 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", "lightbox"], function (Vue, Vuex, Lightbox) {
+    define(["Vue", "vuex"], function (Vue, Vuex) {
         Vue.use(Lightbox);
         return Vue.component("thank-you", {
             template: template, // the variable template will be injected,
