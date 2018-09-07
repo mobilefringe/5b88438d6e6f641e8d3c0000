@@ -161,6 +161,13 @@
                     'hours',
                     'getTodayHours',
                 ]),
+                searchList() {
+      return _.union(
+        this.processedStores,
+        this.processedEvents,
+        this.processedPromos
+      );
+    }
                 locale: {
                     get () {
                         return this.$store.state.locale
