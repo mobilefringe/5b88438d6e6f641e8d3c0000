@@ -17,9 +17,21 @@
                 </div>
                 <div class="col-sm-9">
                     <div class="header_social_container hidden-sm hidden-xs">
-                        <div>
-                            
+                        <div id="search_component_wrapper" class="hidden_phone">
+                        <div class="search_component_container">
+                            <search-component :list="searchList" placeholder="Search" :suggestion-attribute="suggestionAttribute" :keys="keys" v-model="search_result" @select="onOptionSelect" :autocomplete="false" :tokenize="true" :minMatchCharLength="3" class="text-left">
+                                <template slot="item" scope="option" class="manual">
+                                    <article class="media">
+                                    <p>
+                                        {{ option.data.name }}
+                                    </p>
+                                    </article>
+                                </template>
+                            </search-component>
+                             <!-- <i id="siteSearchBtn" class="fa fa-search"></i> -->
+                            <!-- <siteSearchComponent site-id='www.rialtorenaissance.com' searchBoxSelector='#searchBox' themeColor='#8A251A' resultPageURL='https://dev-preview.rialtorenaissance.com/search-results' resultPageContainer="#searchResults"></siteSearchComponent> -->
                         </div>
+                    </div>
                         <div class="header_social">
                             <span class="social_icon" v-for="item in social_media">
                                 <a :href="item.url" target="_blank">
