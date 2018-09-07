@@ -201,7 +201,7 @@ define([], function () {
             children: [
                 {
                     path: '',
-                    component: view('newsletter'),
+                    component: view('thank_you'),
                     meta: {
                         pageName: 'Newsletter',
                     },
