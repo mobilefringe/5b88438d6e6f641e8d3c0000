@@ -10,10 +10,8 @@
                 </div>
                 <div class="main_container mobile_padding margin_30">
                     <div class="details_row">
-                        <div class="details_col_3 hidden_phone">
-                            <img class="img_max" src="http://via.placeholder.com/220x600" alt="" />    
-                        </div>
-                        <div class="details_col_9">
+                        
+                        <div class="col-sm-12">
                             <div class="page_body">
                                 Your subscription has been confirmed. You've been added to our list and will hear from us soon.
                             </div>
