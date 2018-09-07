@@ -54,62 +54,95 @@
                         }
                     }
             },
-            beforeRouteUpdate(to, from, next) {
-                this.$nextTick(function() {
-                    this.updateResults();
-                });
-                next();
+            mounted () {
+                this.form_data.email = this.$route.query.email;
+                $("#cm-vuutyk-vuutyk").val(this.form_data.email);
             },
-            created() {
-                this.updateResults();
-                if (
-                    this.$route.params.results == null &&
-                    this.$route.params.results == undefined
-                ) {
-                    this.$router.push("/");
+            watch : {
+                $route () {
+                    this.form_data.email = this.$route.query.email;
+                    $("#cm-vuutyk-vuutyk").val(this.form_data.email);
                 }
             },
             computed: {
-                ...mapGetters(["property", "findRepoByName"]),
-                pageBanner() {
-                    var pageBanner = null;
-                    var temp_repo = this.findRepoByName("Pages Banner").images;
-                    if (temp_repo != null) {
-                        pageBanner = temp_repo[0];
-                    } else {
-                        pageBanner = {
-                            image_url: "//codecloud.cdn.speedyrails.net/sites/5b5f2c136e6f644fcb5b0100/image/jpeg/1529532304000/insidebanner2.jpg"
-                        };
-                    }
-                    return pageBanner;
-                }
+                ...Vuex.mapGetters([
+                    'property',
+                    'findRepoByName'
+                ])
             },
             methods: {
-                truncated(string) {
-                    return _.truncate(string, {
-                        length: 150,
-                        separator: " "
-                    });
-                },
-                updateResults() {
-                    if (
-                        this.$route.query.searchQuery !== null &&
-                        this.$route.query.searchQuery !== undefined &&
-                        this.$route.query.searchQuery.length > 0
-                    ) {
-                        if (
-                            this.$route.params.results !== null &&
-                            this.$route.params.results !== undefined &&
-                            Array.isArray(this.$route.params.results)
-                        ) {
-                            this.searchResults = this.$route.params.results;
-                            this.searchQuery = this.$route.query.searchQuery;
+                validateBeforeSubmit(form) {
+                    this.$validator.validateAll().then((result) => {
+                        if (result) {
+                            let errors = this.errors;
+                            
+                            if(errors.length > 0) {
+                                console.log("Error");
+                            } else {
+                                console.log("No Error");
+                                // return true;
+                                form.target.submit();
+                            }
                         }
-                    } else {
-                        this.$router.push("/");
-                    }
+                    })
                 }
             }
+            beforeRouteUpdate(to, from, next) {
+        this.$nextTick(function() {
+            this.updateResults();
+        });
+        next();
+    },
+    created() {
+        this.updateResults();
+        if (
+            this.$route.params.results == null &&
+            this.$route.params.results == undefined
+        ) {
+            this.$router.push("/");
+        }
+    },
+    computed: {
+        ...mapGetters(["property", "findRepoByName"]),
+        pageBanner() {
+            var pageBanner = null;
+            var temp_repo = this.findRepoByName("Pages Banner").images;
+            if (temp_repo != null) {
+                pageBanner = temp_repo[0];
+            } else {
+                pageBanner = {
+                    image_url: "//codecloud.cdn.speedyrails.net/sites/5b5f2c136e6f644fcb5b0100/image/jpeg/1529532304000/insidebanner2.jpg"
+                };
+            }
+            return pageBanner;
+        }
+    },
+    methods: {
+        truncated(string) {
+            return _.truncate(string, {
+                length: 150,
+                separator: " "
+            });
+        },
+        updateResults() {
+            if (
+                this.$route.query.searchQuery !== null &&
+                this.$route.query.searchQuery !== undefined &&
+                this.$route.query.searchQuery.length > 0
+            ) {
+                if (
+                    this.$route.params.results !== null &&
+                    this.$route.params.results !== undefined &&
+                    Array.isArray(this.$route.params.results)
+                ) {
+                    this.searchResults = this.$route.params.results;
+                    this.searchQuery = this.$route.query.searchQuery;
+                }
+            } else {
+                this.$router.push("/");
+            }
+        }
+    }
         });
     });
 </script>
