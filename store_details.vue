@@ -104,7 +104,6 @@
     </div>
 </template>
 
-
 <script>
     define(['Vue', 'vuex', 'moment', "vue!mapplic-map"], function(Vue, Vuex, moment, MapplicComponent) {
         return Vue.component("store-details-component", {
@@ -151,6 +150,7 @@
                     this.currentStore.zoom = 2;
                     if ( _.includes(this.currentStore.store_front_url_abs, 'missing')) {
                         this.currentStore.store_front_url_abs = this.property.default_logo_url;
+                        console.log("this.currentStore.store_front_url_abs", this.currentStore.store_front_url_abs)
                     }
                     
                     var vm = this;
