@@ -210,6 +210,20 @@ define([], function () {
             ]
         },
         {
+            path: '/search-results',
+            component: view('default'),
+            children: [
+                {
+                    path: '',
+                    component: view('thank_you'),
+                    meta: {
+                        pageName: 'Thank You',
+                    },
+                    name: 'thankyou'
+                }
+            ]
+        },
+        {
             path: '*',
             redirect: '/'
         }
