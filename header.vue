@@ -28,8 +28,6 @@
                                         </article>
                                     </template>
                                 </search-component>
-                                 <!-- <i id="siteSearchBtn" class="fa fa-search"></i> -->
-                                <!-- <siteSearchComponent site-id='www.rialtorenaissance.com' searchBoxSelector='#searchBox' themeColor='#8A251A' resultPageURL='https://dev-preview.rialtorenaissance.com/search-results' resultPageContainer="#searchResults"></siteSearchComponent> -->
                             </div>
                         </div>
                         <div class="header_social">
