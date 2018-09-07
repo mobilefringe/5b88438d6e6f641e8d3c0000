@@ -203,7 +203,7 @@ define([], function () {
                     path: '',
                     component: view('thank_you'),
                     meta: {
-                        pageName: 'ThankYou',
+                        pageName: 'Thank You',
                     },
                     name: 'thankyou'
                 }
