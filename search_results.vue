@@ -36,16 +36,12 @@
         return Vue.component("newsletter-component", {
             template: template, // the variable template will be injected
             props:['inside_banner'],
-            data: function() {
-                return {
-                    dataLoaded: true,
-                    pageBanner: null,
-                    siteInfo: site,
-                    form_data : {},
-                    formSuccess : false,
-                    formError: false
-                }
-            },
+            data() {
+    return {
+      searchResults: null,
+      searchQuery: null
+    };
+  },
             created() {
                 var temp_repo = this.findRepoByName('Newsletter Banner');
                 if(temp_repo !== null && temp_repo !== undefined) {
