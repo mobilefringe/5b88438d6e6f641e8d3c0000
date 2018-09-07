@@ -37,11 +37,11 @@
             template: template, // the variable template will be injected
             props:['inside_banner'],
             data() {
-    return {
-      searchResults: null,
-      searchQuery: null
-    };
-  },
+                return {
+                  searchResults: null,
+                  searchQuery: null
+                };
+            },
             created() {
                 var temp_repo = this.findRepoByName('Newsletter Banner');
                 if(temp_repo !== null && temp_repo !== undefined) {
