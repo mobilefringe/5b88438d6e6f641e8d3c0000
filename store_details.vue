@@ -13,7 +13,12 @@
                 <div class="main_container margin_30" id="store_details_container">
                     <div class="details_row">
                         <div class="details_col_3">
-                            <img class="store_details_image center-block" :src="currentStore.store_front_url_abs" :alt="currentStore.name + ' Logo'" />
+                            <div v-if="currentStore.no_logo" class="store_details_image center-block">
+                                <div class="no_logo">
+                                    <p class="store_details_name">{{ currentStore.name }}</p>
+                                </div>    
+                            </div>
+                            <img v-else class="store_details_image center-block" :src="currentStore.store_front_url_abs" :alt="currentStore.name + ' Logo'" />
                             <div v-if="currentStore.phone">
                                 <h3 class="inside_page_title">Phone</h3>
                                 <a class="store_details_phone" :href="'tel:' + currentStore.phone">{{ currentStore.phone }}</a>    
@@ -149,7 +154,7 @@
                 currentStore: function() {
                     this.currentStore.zoom = 2;
                     if ( _.includes(this.currentStore.store_front_url_abs, 'missing')) {
-                        this.currentStore.store_front_url_abs = Site.default_logo_url;//this.property.default_logo_url;
+                        this.currentStore.store_front_url_abs = Site.default_logo_url;
                     }
                     
                     var vm = this;
