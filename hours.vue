@@ -32,7 +32,7 @@
                         <div class="col-md-6">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <h3 class="hours_heading caps">We will be open the following Holidays</h3>
+                                    <h3 class="hours_heading caps">We will be open on the following Holidays</h3>
                                 </div>
                             </div>
                             <div class="hours_container">
@@ -47,7 +47,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
-                                    <h3 class="hours_heading caps">We will be closed the following Statutory Holidays</h3>
+                                    <h3 class="hours_heading caps">We will be closed on the following Statutory Holidays</h3>
                                 </div>
                             </div>
                             <div class="hours_container">
@@ -82,7 +82,7 @@
             },
             created() {
                 this.loadData().then(response => {
-                    var temp_repo = this.findRepoByName('Hours Banner').images;
+                    var temp_repo = this.findRepoByName('Hours Banner');
                     if(temp_repo !== null && temp_repo !== undefined) {
                        temp_repo = temp_repo.images;
                        this.pageBanner = temp_repo[0];
