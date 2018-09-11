@@ -116,7 +116,7 @@
                             }
                             
                             if (_.includes(value.image_url, 'missing')) {
-                                value.image_url = "//codecloud.cdn.speedyrails.net/sites/5b88438d6e6f641e8d3c0000/image/png/1531496511000/event placeholder.png";
+                                value.image_url = site.default_logo_url;"//codecloud.cdn.speedyrails.net/sites/5b88438d6e6f641e8d3c0000/image/png/1531496511000/event placeholder.png";
                             }
                             
                             value.description_short = _.truncate(value.description, { 'length': 100, 'separator': ' ' });
