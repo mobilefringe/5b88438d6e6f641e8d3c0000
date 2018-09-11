@@ -46,7 +46,9 @@
                                     </div>
                                 </form>
                                 <br/>
-                                <div id="send_contact_success" class="alert alert-success" role="alert" v-show="formSuccess">
+                                <div class="row">
+                                    <div>
+                                        <div id="send_contact_success" class="alert alert-success" role="alert" v-show="formSuccess">
                                     <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
                                     <span class="sr-only">Success</span>
                                     Thank you for contacting us. A member from our team will contact you shortly.
@@ -55,7 +57,10 @@
                                     <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                                     <span class="sr-only">Error:</span>
                                     There was an error when trying to submit your request. Please try again later.
-                                </div>    
+                                </div> 
+                                    </div>
+                                    
+                                </div>   
                             </div>
                             <div class="row" v-if="currentPage">
                                 <div class="col-md-12">
