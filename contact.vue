@@ -8,7 +8,7 @@
                         <h2>Contact Us</h2>
                     </div>
                 </div>
-                <div class="main_container margin_30">
+                <div class="main_container margin_30 clearfix">
                     <div class="details_row">
                         <div class="details_col_3 hidden_phone">
                             <img class="img_max" src="http://via.placeholder.com/220x600" alt="" />    
