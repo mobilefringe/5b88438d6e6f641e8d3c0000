@@ -135,7 +135,7 @@
                     floor_1.title = "Level One";
                     floor_1.map = this.getSVGMap;
                     // floor_1.minimap = this.miniOne;
-                    floor_1.z_index = 1;
+                    floor_1.z_index = null;
                     floor_1.show = true;
                     floor_list.push(floor_1);
                     
