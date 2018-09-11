@@ -8,7 +8,7 @@
                         <h2>Contact Us</h2>
                     </div>
                 </div>
-                <div class="main_container margin_30 clearfix">
+                <div class="main_container margin_30">
                     <div class="details_row">
                         <div class="details_col_3 hidden_phone">
                             <img class="img_max" src="http://via.placeholder.com/220x600" alt="" />    
@@ -46,21 +46,16 @@
                                     </div>
                                 </form>
                                 <br/>
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <div id="send_contact_success" class="alert alert-success" role="alert" v-show="formSuccess">
-                                            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-                                            <span class="sr-only">Success</span>
-                                            Thank you for contacting us. A member from our team will contact you shortly.
-                                        </div>
-                                        <div id="send_contact_error" class="alert alert-danger" role="alert" v-show="formError">
-                                            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                                            <span class="sr-only">Error:</span>
-                                            There was an error when trying to submit your request. Please try again later.
-                                        </div> 
-                                    </div>
-                                    
-                                </div>   
+                                <div id="send_contact_success" class="alert alert-success" role="alert" v-show="formSuccess">
+                                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                                    <span class="sr-only">Success</span>
+                                    Thank you for contacting us. A member from our team will contact you shortly.
+                                </div>
+                                <div id="send_contact_error" class="alert alert-danger" role="alert" v-show="formError">
+                                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                                    <span class="sr-only">Error:</span>
+                                    There was an error when trying to submit your request. Please try again later.
+                                </div>    
                             </div>
                             <div class="row" v-if="currentPage">
                                 <div class="col-md-12">
