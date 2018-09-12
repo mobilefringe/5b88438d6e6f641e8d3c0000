@@ -150,11 +150,6 @@
                     this.updateCurrentStore(this.id);
                 });
             },
-            watch: {
-                currentStore: function() {
-                    
-                },
-            },
             computed: {
                 ...Vuex.mapGetters([
                     'property',
