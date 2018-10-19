@@ -11,7 +11,7 @@
                 <div class="main_container mobile_padding margin_30">
                     <div class="details_row">
                         <div class="details_col_3 hidden_phone">
-                            <img class="img_max" src="//codecloud.cdn.speedyrails.net/sites/5b88438d6e6f641e8d3c0000/image/jpeg/1534358207000/sidebanner9.jpg" alt="" />    
+                            <img class="img_max" src="//codecloud.cdn.speedyrails.net/sites/5b88438d6e6f641e8d3c0000/image/jpeg/1539959814048/sidebanner_2.jpg" alt="" />    
                         </div>
                         <div class="details_col_9" v-if="currentEvent">
                             <router-link to="/events">
