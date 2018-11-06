@@ -74,7 +74,14 @@
                             "image_url": "//codecloud.cdn.speedyrails.net/sites/5b88438d6e6f641e8d3c0000/image/png/1531495616000/inside_banner.png"
                         }
                     }
-                    
+                    var temp_repo1 = this.findRepoByName('Jobs Side Banner');
+                    if(temp_repo1  && temp_repo1.images) {
+                        this.sideBanner = temp_repo1.images[0];
+                    } else {
+                        this.sideBanner = {
+                            "image_url": ""
+                        }
+                    }
 				this.$store.dispatch("getData", "jobs").then(response => {
 					this.currentJob = this.findJobBySlug(this.id);
 					if (this.currentJob === null || this.currentJob === undefined) {
