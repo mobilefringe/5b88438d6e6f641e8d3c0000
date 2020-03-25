@@ -18,7 +18,6 @@
                                 <div class="inside_page_header"><i class="fa fa-caret-left"></i> Back to List</div>
                             </router-link>
                             <img v-lazy="currentEvent.image_url" :alt="'Event: ' + currentEvent.name" class="margin_20 img_max"/>
-                            <!--<img v-if="_.includes(currentEvent.event_image_url_abs, 'missing')" v-lazy="currentEvent.event_image_url_abs" :alt="'Event: ' + currentEvent.name" class="margin_20 img_max"/>-->
                             <h3 class="promo_name">{{ currentEvent.name }}</h3>
                             <p class="promo_store_name">
                                 <router-link v-if="currentEvent.eventable_type == 'Store'" :to="'/stores/'+ currentEvent.store.slug">
@@ -66,47 +65,26 @@
 				}
 			},
 			created() {
+			    // Page Banner
 			    var temp_repo = this.findRepoByName('Events Banner');
-                if(temp_repo && temp_repo.images) {
+                if (temp_repo && temp_repo.images) {
                    temp_repo = temp_repo.images;
                    this.pageBanner = temp_repo[0];
-                }
-                else {
+                } else {
                     this.pageBanner = {
                         "image_url": "//codecloud.cdn.speedyrails.net/sites/5b88438d6e6f641e8d3c0000/image/png/1531495616000/inside_banner.png"
                     }
                 }
+                // Side Banner
                 var temp_repo1 = this.findRepoByName('Events Side Banner');
-                if(temp_repo1 && temp_repo1.images) {
+                if (temp_repo1 && temp_repo1.images) {
                     this.sideBanner = temp_repo1.images[0];
                 } else {
                     this.sideBanner = {
                         "image_url": ""
                     }
                 }      
-// 				this.$store.dispatch("getData", "events").then(response => {
-// 					this.currentEvent = this.findEventBySlug(this.id);
-// 					if (this.currentEvent === null || this.currentEvent === undefined) {
-// 						this.$router.replace({ name: '404' });
-// 					} else {
-// 					    console.log("	this.currentEvent", 	this.currentEvent)
-// 					   // if(this.currentEvent != null) {
-//         //                     if (this.currentEvent.eventable_type === "Store"){
-//         //                         if (_.includes(this.currentEvent.event_image_url_abs, 'missing')) {
-//         //                             this.currentEvent.image_url = this.currentEvent.store.store_front_url_abs; 
-//         //                         }
-//         //                     } else {
-//         //                         if (_.includes(this.currentEvent.event_image_url_abs, 'missing')) {
-//         //                             this.currentEvent.image_url = "//codecloud.cdn.speedyrails.net/sites/5b88438d6e6f641e8d3c0000/image/png/1531496511000/event placeholder.png";    
-//         //                         }
-//         //                     }
-//         //                 }
-// 					}
-// 					this.dataLoaded = true;
-// 				}, error => {
-// 					console.error("Could not retrieve data from server. Please check internet connection and try again.");
-// 				});
-// 			},
+                
                 this.$store.dispatch("getData", "events").then(response => {
 					this.currentEvent = this.findEventBySlug(this.id);
 					if (this.currentEvent === null || this.currentEvent === undefined) {
@@ -119,14 +97,14 @@
 			},
 			watch: {
                 currentEvent : function (){
-                    if(this.currentEvent != null) {
-                        if (this.currentEvent.eventable_type === "Store"){
+                    if (this.currentEvent != null) {
+                        if (this.currentEvent.eventable_type === "Store") {
                             if (_.includes(this.currentEvent.event_image_url_abs, 'missing')) {
                                 this.currentEvent.image_url = this.currentEvent.store.store_front_url_abs; 
                             }
                         } else {
                             if (_.includes(this.currentEvent.event_image_url_abs, 'missing')) {
-                                this.currentEvent.image_url = "//codecloud.cdn.speedyrails.net/sites/5b2925776e6f6432b6110000/image/png/1531496511000/event placeholder.png";    
+                                this.currentEvent.image_url = "//codecloud.cdn.speedyrails.net/sites/5b88438d6e6f641e8d3c0000/image/jpeg/1541711790000/event placeholder.jpg";    
                             }
                         }
                     }
