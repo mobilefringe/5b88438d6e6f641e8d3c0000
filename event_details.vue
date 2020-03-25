@@ -86,6 +86,7 @@
 				this.$store.dispatch("getData", "events").then(response => {
 					this.currentEvent = this.findEventBySlug(this.id);
 					if (this.currentEvent === null || this.currentEvent === undefined) {
+					    console.log("	this.currentEvent", 	this.currentEvent)
 						this.$router.replace({ name: '404' });
 					}
 					else {
