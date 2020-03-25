@@ -86,10 +86,9 @@
 				this.$store.dispatch("getData", "events").then(response => {
 					this.currentEvent = this.findEventBySlug(this.id);
 					if (this.currentEvent === null || this.currentEvent === undefined) {
-					    console.log("	this.currentEvent", 	this.currentEvent)
 						this.$router.replace({ name: '404' });
-					}
-					else {
+					} else {
+					    console.log("	this.currentEvent", 	this.currentEvent)
 					   // if(this.currentEvent != null) {
         //                     if (this.currentEvent.eventable_type === "Store"){
         //                         if (_.includes(this.currentEvent.event_image_url_abs, 'missing')) {
